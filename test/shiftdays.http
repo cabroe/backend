@@ -1,0 +1,45 @@
+### Alle Schichttage abrufen
+GET http://localhost:8080/api/v1/shiftdays
+Accept: application/json
+
+### Einzelnen Schichttag abrufen
+GET http://localhost:8080/api/v1/shiftdays/1
+Accept: application/json
+
+### Neuen Schichttag erstellen
+POST http://localhost:8080/api/v1/shiftdays
+Content-Type: application/json
+
+{
+    "date": "2024-01-15T08:00:00Z",
+    "shift_week_id": 1,
+    "shift_type_id": 1,
+    "employee_id": 1,
+    "status": "geplant",
+    "notes": "Frühdienst"
+}
+
+### Schichttag aktualisieren
+PUT http://localhost:8080/api/v1/shiftdays/1
+Content-Type: application/json
+
+{
+    "date": "2024-01-15T14:00:00Z",
+    "shift_week_id": 1,
+    "shift_type_id": 2,
+    "employee_id": 1,
+    "status": "bestätigt",
+    "notes": "Spätdienst"
+}
+
+### Schichttag löschen
+DELETE http://localhost:8080/api/v1/shiftdays/1
+Accept: application/json
+
+### Schichttage nach Kalenderwoche abrufen
+GET http://localhost:8080/api/v1/shiftdays/week/2024-02
+Accept: application/json
+
+### Schichtkonflikte prüfen
+GET http://localhost:8080/api/v1/shiftdays/conflicts
+Accept: application/json

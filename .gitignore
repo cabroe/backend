@@ -1,0 +1,50 @@
+# Binaries and Build
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+dist/
+build/
+
+# Go specific
+*.test
+*.out
+vendor/
+go.work
+
+# Development tools
+tmp/
+build-errors.log
+.air.toml
+
+# Databases
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.key
+*.cert
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Documentation & Generated files
+docs/
+swagger/
+api/swagger.*
+
+# Logs
+*.log
+logs/

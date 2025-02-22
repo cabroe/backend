@@ -1,0 +1,50 @@
+### Alle Mitarbeiter abrufen
+GET http://localhost:8080/api/v1/employees
+Accept: application/json
+
+### Einzelnen Mitarbeiter abrufen
+GET http://localhost:8080/api/v1/employees/1
+Accept: application/json
+
+### Neuen Mitarbeiter erstellen
+POST http://localhost:8080/api/v1/employees
+Content-Type: application/json
+
+{
+    "first_name": "Max",
+    "last_name": "Mustermann",
+    "email": "max.mustermann@example.com",
+    "password": "geheim123",
+    "color": "#FF5733",
+    "department_id": 1,
+    "is_admin": false
+}
+
+### Mitarbeiter aktualisieren
+PUT http://localhost:8080/api/v1/employees/1
+Content-Type: application/json
+
+{
+    "first_name": "Maximilian",
+    "last_name": "Mustermann",
+    "email": "maximilian.mustermann@example.com",
+    "color": "#33FF57",
+    "department_id": 1,
+    "is_admin": false
+}
+
+### Mitarbeiter löschen
+DELETE http://localhost:8080/api/v1/employees/1
+Accept: application/json
+
+### Mitarbeiter nach Abteilung abrufen
+GET http://localhost:8080/api/v1/employees/department/1
+Accept: application/json
+
+### Schichten eines Mitarbeiters abrufen
+GET http://localhost:8080/api/v1/employees/shifts/1
+Accept: application/json
+
+### Verfügbare Mitarbeiter für Datum abrufen
+GET http://localhost:8080/api/v1/employees/available/2024-01-15
+Accept: application/json

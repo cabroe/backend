@@ -1,0 +1,39 @@
+### Alle Schichttypen abrufen
+GET http://localhost:8080/api/v1/shifttypes
+Accept: application/json
+
+### Einzelnen Schichttyp abrufen
+GET http://localhost:8080/api/v1/shifttypes/1
+Accept: application/json
+
+### Neuen Schichttyp erstellen
+POST http://localhost:8080/api/v1/shifttypes
+Content-Type: application/json
+
+{
+    "name": "Frühschicht",
+    "description": "Frühe Schicht von 6-14 Uhr",
+    "color": "#FFD700",
+    "start_time": "06:00",
+    "end_time": "14:00"
+}
+
+### Schichttyp aktualisieren
+PUT http://localhost:8080/api/v1/shifttypes/1
+Content-Type: application/json
+
+{
+    "name": "Spätschicht",
+    "description": "Späte Schicht von 14-22 Uhr", 
+    "color": "#4169E1",
+    "start_time": "14:00",
+    "end_time": "22:00"
+}
+
+### Schichttyp löschen
+DELETE http://localhost:8080/api/v1/shifttypes/1
+Accept: application/json
+
+### Schichttypen einer Abteilung abrufen
+GET http://localhost:8080/api/v1/shifttypes/department/1
+Accept: application/json
